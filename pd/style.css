@@ -1,0 +1,195 @@
+/* Color Variables */
+:root {
+    --primary-pink: #ffd6e0;
+    --soft-lavender: #e6e6fa;
+    --mint-green: #c3e6cb;
+    --cream: #fff9f5;
+    --text-dark: #4a4a4a;
+    --shadow: rgba(0, 0, 0, 0.1);
+}
+
+/* Base Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: var(--cream);
+    color: var(--text-dark);
+    overflow-x: hidden;
+}
+
+/* Navigation Styles */
+nav {
+    background-color: white;
+    padding: 1.5rem 3rem;
+    box-shadow: 0 2px 10px var(--shadow);
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo h1 {
+    font-family: 'Quicksand', sans-serif;
+    color: var(--text-dark);
+    font-size: 1.8rem;
+}
+
+.nav-links {
+    display: flex;
+    gap: 2rem;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: var(--text-dark);
+    padding: 0.5rem 1rem;
+    border-radius: 20px;
+    transition: all 0.3s ease;
+}
+
+.nav-links a:hover, .nav-links a.active {
+    background-color: var(--primary-pink);
+    color: #333;
+}
+
+/* Section Styles */
+.section {
+    min-height: 100vh;
+    padding: 8rem 4rem 4rem;
+    display: none;
+}
+
+.section.active {
+    display: block;
+    animation: fadeIn 0.5s ease;
+}
+
+/* Hero Section */
+.hero {
+    text-align: center;
+    padding: 4rem 0;
+}
+
+.hero h1 {
+    font-size: 3.5rem;
+    margin-bottom: 1rem;
+    color: #333;
+}
+
+.hero h2 {
+    font-size: 2rem;
+    color: #666;
+    margin-bottom: 2rem;
+}
+
+/* Feature Container Styles */
+.feature-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 2rem;
+    background: white;
+    border-radius: 20px;
+    box-shadow: 0 4px 15px var(--shadow);
+}
+
+/* Buttons */
+.cta-button, .feature-button {
+    padding: 1rem 2rem;
+    border: none;
+    border-radius: 25px;
+    font-size: 1.1rem;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+}
+
+.cta-button {
+    background: linear-gradient(135deg, var(--primary-pink), var(--soft-lavender));
+    color: var(--text-dark);
+    font-weight: 600;
+}
+
+.feature-button {
+    background-color: var(--mint-green);
+    color: var(--text-dark);
+}
+
+.cta-button:hover, .feature-button:hover {
+    transform: translateY(-2px);
+}
+
+/* Community Section */
+.community-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+    margin: 2rem 0;
+}
+
+.community-card {
+    background: var(--cream);
+    padding: 2rem;
+    border-radius: 15px;
+    text-align: center;
+    transition: transform 0.3s ease;
+}
+
+.community-card:hover {
+    transform: translateY(-5px);
+}
+
+.avatar {
+    width: 80px;
+    height: 80px;
+    background-color: var(--soft-lavender);
+    border-radius: 50%;
+    margin: 0 auto 1rem;
+}
+
+/* Chatbot Interface */
+.chatbot-interface {
+    background: var(--soft-lavender);
+    padding: 2rem;
+    border-radius: 15px;
+    text-align: center;
+}
+
+.chat-bubble {
+    background: white;
+    padding: 1rem;
+    border-radius: 15px;
+    margin-bottom: 1rem;
+    display: inline-block;
+}
+
+/* Game Section */
+.game-window {
+    background: var(--mint-green);
+    height: 400px;
+    border-radius: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 2rem;
+}
+
+.game-placeholder {
+    text-align: center;
+}
+
+.game-placeholder span {
+    font-size: 4rem;
+}
+
+/* Animations */
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
